@@ -111,7 +111,7 @@ class PanObject:
             session.reauthenticate()
         url = self._base_url + self._endpoint
         if hasattr(self, "folder"):
-            params = {"folder": self.folder}
+            params = {"folder": self.folder, "limit": 5000}
         else:
             params = {}
         try:
